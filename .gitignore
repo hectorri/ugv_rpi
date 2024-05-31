@@ -6,3 +6,5 @@ tutorial_cn/.ipynb_checkpoints/
 templates/pictures/photo*
 templates/videos/video*
 tutorial_en/*
+secrets.py
+temp.mp3
