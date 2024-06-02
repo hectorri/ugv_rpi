@@ -1,4 +1,4 @@
-from ..secrets import OPENAI_API_LEY_ROVER
+from secrets import OPENAI_API_LEY_ROVER
 import speech_recognition as sr
 import openai
 import sounddevice
@@ -8,7 +8,7 @@ import os
 client = client = openai.OpenAI(api_key=OPENAI_API_LEY_ROVER)
 
 messages = [
-    {'role': 'system', 'content': 'Responde de forma breve'}
+    {'role': 'system', 'content': 'Te llamas Faustina. Responde de forma breve'}
 ]
 
 def text_to_speech(text):
@@ -59,6 +59,7 @@ def listen_and_respond():
         print("Could not request results from Google Speech Recognition service; {0}".format(e))
 
 def main():
+    text_to_speech("Hola, ¿en qué puedo ayudarte? ¿Cómo te llamas?")
     while True:
         listen_and_respond()
 
